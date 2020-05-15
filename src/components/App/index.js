@@ -8,6 +8,13 @@ Board details:
  - Second round $ amts: 400, 800, 1200, 1600, 2000
  - Blue with white text ($ amnts in yellow)
 
+Colors:
+ - Dark navy: #0E0039 http://www.colorhunter.com/tag/jeopardy/1
+ - Main blue: #060CE9 https://www.colourlovers.com/color/060CE9/Jeopardy_Blue
+ - Yellow: #FFCC00 https://www.colorcombos.com/colors/FFCC00
+ - Dark pink: #F22D95 http://www.colorhunter.com/tag/jeopardy/1
+ - Lighter pink: #E416EE http://www.colorhunter.com/tag/jeopardy/1
+
 MVP:
  - A full board of first round jeopardy
 
@@ -46,7 +53,7 @@ function App() {
       });
   });
 
-  return <div className="App">testing</div>;
+  return <div className="App"></div>;
 }
 
 export default App;
