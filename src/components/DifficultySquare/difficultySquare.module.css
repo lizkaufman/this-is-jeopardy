@@ -1,0 +1,13 @@
+.difficultySquare {
+  background-color: var(--main-blue);
+  color: var(--yellow);
+  border: 2px solid var(--dark-indigo);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.difficultyNumber {
+  margin: 0 auto;
+  font-weight: bold;
+}
