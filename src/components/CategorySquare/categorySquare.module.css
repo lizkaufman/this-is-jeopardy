@@ -1,2 +1,12 @@
 .categorySquare {
+  background-color: var(--main-blue);
+  color: white;
+  border: 2px solid var(--dark-indigo);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.categoryText {
+  margin: 0 auto;
 }
