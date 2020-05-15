@@ -11,8 +11,8 @@ function BoardColumn() {
   const [cluesBank, setCluesBank] = useState([]);
 
   useEffect(() => {
-    //potential categories have max id of 18418, so this chooses a random category id <= that
-    const randCatId = Math.floor(Math.random() * Math.floor(18418));
+    //potential categories have max id of 18418, so this chooses a random category id under or equal to that
+    const randCatId = Math.floor(Math.random() * 18419);
     console.log(randCatId);
     setCategoryId(randCatId);
   }, []);
@@ -22,13 +22,19 @@ function BoardColumn() {
     fetch(apiUrl + `category?id=${categoryId}`, { cache: 'no-store' })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        console.log({ categoryData: data });
+        const title = data.title;
+        console.log({ title: title });
+        setCategory(title.toUpperCase());
+        const clues = data.clues;
+        console.log({ clues: clues });
+        setCluesBank(clues);
       });
   }, [categoryId]);
 
   return (
     <div className={css.boardColumn}>
-      <CategorySquare />
+      <CategorySquare category={category} />
       <PlaySquare cluesBank={cluesBank} />
     </div>
   );
