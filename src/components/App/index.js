@@ -22,6 +22,13 @@ MVP functionality:
  - When clicked 2nd time, show answer
  - When clicked 3rd time, blank out the square
 
+Goals for further sprints:
+ - Double jeopardy board once the first round is over 
+ - Entering the answer and checking if it's correct or not 
+ - Scoring 
+ - Multiplayer (using the same device)
+ - Multiplayer (using sockets)
+
 -------------------------------------
 */
 
