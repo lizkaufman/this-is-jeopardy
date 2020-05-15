@@ -20,7 +20,7 @@ MVP:
 
 MVP components:
  - Category square 
- - Question square 
+ - Play squares (incl question and difficulty)
  - Board display 
 
 MVP functionality:
@@ -42,18 +42,14 @@ Goals for further sprints:
 import React, { useEffect } from 'react';
 import './App.css';
 
-const apiUrl = 'http://jservice.io/api/';
+import GameBoard from '../GameBoard';
 
 function App() {
-  useEffect(() => {
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      });
-  });
-
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <GameBoard />
+    </div>
+  );
 }
 
 export default App;
