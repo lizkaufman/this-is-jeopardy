@@ -42,10 +42,14 @@ function BoardColumn() {
     //then sort these by order of difficulty
     //TODO: will think of how to get around the other issues re: difficulty/rounds in next iterations - just starting w/ getting them in order
     let cluesArray = [];
-    for (let i = 0; i < 5; i++) {
-      //FIXME: currently doesn't account for duplicates! Need to use if statement and .includes() to check if the q is already in the array before adding it; if not, re-randomize until it's not a dupe
-      const cluesIndex = randomize(cluesBank.length);
-      cluesArray.push(cluesBank[cluesIndex]);
+    if (cluesBank.length === 5) {
+      cluesArray.push(cluesBank);
+    } else {
+      for (let i = 0; i < 5; i++) {
+        //FIXME: currently doesn't account for duplicates! Need to use if statement and .includes() to check if the q is already in the array before adding it; if not, re-randomize until it's not a dupe
+        const cluesIndex = randomize(cluesBank.length);
+        cluesArray.push(cluesBank[cluesIndex]);
+      }
     }
     console.log({ cluesArray: cluesArray });
     return cluesArray;
