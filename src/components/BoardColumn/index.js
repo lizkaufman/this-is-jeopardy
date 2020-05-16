@@ -45,11 +45,7 @@ function BoardColumn() {
     if (cluesBank.length === 5) {
       cluesArray.push(cluesBank);
     } else {
-      for (let i = 0; i < 5; i++) {
-        //FIXME: currently doesn't account for duplicates! Need to use if statement and .includes() to check if the q is already in the array before adding it; if not, re-randomize until it's not a dupe
-        const cluesIndex = randomize(cluesBank.length);
-        cluesArray.push(cluesBank[cluesIndex]);
-      }
+      //TODO: Old way resulted in duplicates, and checking for dupes each time is hard. New plan! Shuffle order of cluesBank array, then push the first five objects into cluesArray.
     }
     console.log({ cluesArray: cluesArray });
     return cluesArray;
