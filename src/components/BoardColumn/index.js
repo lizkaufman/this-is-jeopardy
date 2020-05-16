@@ -29,36 +29,35 @@ function BoardColumn() {
 
   useEffect(() => {
     //when the cluesBank is populated, sets the questions to send down to the playSquares
-    setQuestionSet(chooseClues());
+    //use .map to sort into separate arrays of difficulty levels
+    //then randomly choose 1 q from each difficulty level array
+    //then sort these by order of difficulty
+    //TODO: will think of how to get around the other issues re: difficulty/rounds in next iterations - just starting w/ getting them in order
+    let cluesArray = [];
+    let shuffledCluesBank = cluesBank.sort(() => Math.random() - 0.5);
+    for (let i = 0; i < 5; i++) {
+      cluesArray.push(shuffledCluesBank[i]);
+    }
+    console.log({ cluesArray: cluesArray });
+    setQuestionSet(cluesArray);
   }, [cluesBank]);
 
   function randomize(max) {
     return Math.floor(Math.random() * max);
   }
 
-  function chooseClues() {
-    //use .map to sort into separate arrays of difficulty levels
-    //then randomly choose 1 q from each difficulty level array
-    //then sort these by order of difficulty
-    //TODO: will think of how to get around the other issues re: difficulty/rounds in next iterations - just starting w/ getting them in order
-    let cluesArray = [];
-    if (cluesBank.length === 5) {
-      cluesArray.push(cluesBank);
-    } else {
-      //TODO: Old way resulted in duplicates, and checking for dupes each time is hard. New plan! Shuffle order of cluesBank array, then push the first five objects into cluesArray.
-    }
-    console.log({ cluesArray: cluesArray });
-    return cluesArray;
-  }
-
   return (
     <div className={css.boardColumn}>
       <CategorySquare category={category} />
-      <PlaySquare question={questionSet[0]} />
-      <PlaySquare question={questionSet[1]} />
-      <PlaySquare question={questionSet[2]} />
-      <PlaySquare question={questionSet[3]} />
-      <PlaySquare question={questionSet[4]} />
+      {questionSet !== [] && (
+        <>
+          <PlaySquare question={questionSet[0]} />
+          <PlaySquare question={questionSet[1]} />
+          <PlaySquare question={questionSet[2]} />
+          <PlaySquare question={questionSet[3]} />
+          <PlaySquare question={questionSet[4]} />
+        </>
+      )}
     </div>
   );
 }
