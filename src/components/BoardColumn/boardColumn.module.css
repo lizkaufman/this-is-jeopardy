@@ -1,4 +1,6 @@
 .boardColumn {
   display: flex;
   flex-direction: column;
+  height: 90vh;
+  width: 16.6%;
 }

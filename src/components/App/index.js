@@ -47,7 +47,34 @@ import GameBoard from '../GameBoard';
 function App() {
   return (
     <div className="App">
+      <div id="intro">
+        <h3>
+          This... Is... Jeopardy! Click each square once for the question, again
+          for the answer, and again to clear. Refresh to reset!
+        </h3>
+      </div>
       <GameBoard />
+      <div id="footer">
+        <p>
+          Made by Liz Kaufman with questions from{' '}
+          <a
+            href="http://jservice.io/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            jservice.io
+          </a>
+          . Click{' '}
+          <a
+            href="https://github.com/lizkaufman/this-is-jeopardy"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            here
+          </a>{' '}
+          to view my Github repo with the code.
+        </p>
+      </div>
     </div>
   );
 }
