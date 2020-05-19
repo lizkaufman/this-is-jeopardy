@@ -3,7 +3,7 @@ import css from './boardColumn.module.css';
 import apiUrl from '../../libs/config';
 
 import CategorySquare from '../Squares/CategorySquare';
-import PlaySquare from '../PlaySquare';
+import PlaySquare from '../Squares/PlaySquare';
 
 const values = ['200', '400', '600', '800', '1000'];
 
@@ -62,4 +62,3 @@ function BoardColumn() {
 }
 
 export default BoardColumn;
-b7278334db8fa5525dfa1fab29d65074460d6e27;
