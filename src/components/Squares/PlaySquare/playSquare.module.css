@@ -5,24 +5,25 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 130px;
-  width: 15vw;
+  height: 17.2%;
+  /* height: 16.6%; */
 }
 
 .value {
   color: #ffcc00;
   margin: auto 0;
-  font-size: 300%;
+  font-size: 3rem;
 }
 
 .question {
   color: white;
   margin: auto 10px;
-  font-size: 95%;
+  font-size: 0.8rem;
 }
 
 .answer {
   color: white;
   margin: auto 0;
   margin: auto 10px;
+  font-size: 1.2rem;
 }
