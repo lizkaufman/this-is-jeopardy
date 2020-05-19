@@ -3,7 +3,7 @@ import css from './boardColumn.module.css';
 import apiUrl from '../../libs/config';
 
 import CategorySquare from '../Squares/CategorySquare';
-import PlaySquare from '../Squares/PlaySquare';
+import PlaySquare from '../PlaySquare';
 
 const values = ['200', '400', '600', '800', '1000'];
 
@@ -31,10 +31,7 @@ function BoardColumn() {
 
   useEffect(() => {
     //when the cluesBank is populated, sets the questions to send down to the playSquares
-    //use .map to sort into separate arrays of difficulty levels
-    //then randomly choose 1 q from each difficulty level array
-    //then sort these by order of difficulty
-    //TODO: will think of how to get around the other issues re: difficulty/rounds in next iterations - just starting w/ getting them in order
+    //TODO: will think of how to get around the other issues re: difficulty/rounds from the data in next iterations - just starting w/ getting them in order
     let cluesArray = [];
     let shuffledCluesBank = cluesBank.sort(() => Math.random() - 0.5);
     for (let i = 0; i < 5; i++) {
@@ -65,3 +62,4 @@ function BoardColumn() {
 }
 
 export default BoardColumn;
+b7278334db8fa5525dfa1fab29d65074460d6e27;
