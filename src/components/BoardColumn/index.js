@@ -5,6 +5,8 @@ import apiUrl from '../../libs/config';
 import CategorySquare from '../Squares/CategorySquare';
 import PlaySquare from '../Squares/PlaySquare';
 
+const values = ['200', '400', '600', '800', '1000'];
+
 function BoardColumn() {
   const [categoryId, setCategoryId] = useState();
   const [category, setCategory] = useState('');
@@ -51,11 +53,11 @@ function BoardColumn() {
       <CategorySquare category={category} />
       {questionSet !== [] && (
         <>
-          <PlaySquare question={questionSet[0]} />
-          <PlaySquare question={questionSet[1]} />
-          <PlaySquare question={questionSet[2]} />
-          <PlaySquare question={questionSet[3]} />
-          <PlaySquare question={questionSet[4]} />
+          <PlaySquare questionObject={questionSet[0]} value={values[0]} />
+          <PlaySquare questionObject={questionSet[1]} value={values[1]} />
+          <PlaySquare questionObject={questionSet[2]} value={values[2]} />
+          <PlaySquare questionObject={questionSet[3]} value={values[3]} />
+          <PlaySquare questionObject={questionSet[4]} value={values[4]} />
         </>
       )}
     </div>

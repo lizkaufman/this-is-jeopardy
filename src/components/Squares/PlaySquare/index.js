@@ -1,27 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import css from './playSquare.module.css';
 
-import DifficultySquare from '../DifficultySquare';
-import QuestionSquare from '../QuestionSquare';
-
-function PlaySquare({ question }) {
+function PlaySquare({ questionObject, value }) {
   const [clicks, setClicks] = useState(0);
-  const [questionText, setQuestionText] = useState('');
-  const [answerText, setAnswerText] = useState('');
-  const [difficulty, setDifficulty] = useState(0);
 
   function handleClick() {
-    console.log({ questionObject: question });
-    console.log({ question: question['question'] });
+    console.log({ questionObject: questionObject });
+    console.log({ question: questionObject['question'] });
+    console.log({ answer: questionObject['answer'] });
+    setClicks(clicks + 1);
   }
-
-  //   useEffect(() => {
-  //     setQuestionText(question['question']);
-  //   }, [question]);
 
   return (
     <div className={css.playSquare} onClick={handleClick}>
-      <QuestionSquare question={questionText} answer={answerText} />
+      {clicks === 0 && <h2 className={css.value}>${value}</h2>}
+      {clicks === 1 && (
+        <h2 className={css.question}>{questionObject['question']}</h2>
+      )}
+      {clicks === 2 && (
+        <h2 className={css.answer}>{questionObject['answer']}</h2>
+      )}
+      {clicks > 2 && <h2 className={css.answer}>-</h2>}
     </div>
   );
 }
