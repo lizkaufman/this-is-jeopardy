@@ -9,10 +9,19 @@
   /* height: 16.6%; */
 }
 
+.playSquare:hover {
+  cursor: pointer;
+}
+
 .value {
   color: #ffcc00;
   margin: auto 0;
   font-size: 3rem;
+  transition: all 0.5s ease;
+}
+
+.value:hover {
+  color: var(--dark-pink);
 }
 
 .question {

@@ -1,2 +1,33 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-navy);
+  height: 100vh;
+}
+
+#intro {
+  text-align: center;
+  color: white;
+  height: 6vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#footer {
+  height: 4vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#footer a {
+  color: white;
+}
+
+#footer p {
+  text-align: right;
+  font-size: 0.6rem;
+  margin-right: 20px;
 }
