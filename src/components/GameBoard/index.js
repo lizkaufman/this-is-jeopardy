@@ -8,11 +8,11 @@ function GameBoard() {
   return (
     <div className={css.gameBoard}>
       <BoardColumn />
-      {/* <BoardColumn />
       <BoardColumn />
       <BoardColumn />
       <BoardColumn />
-      <BoardColumn /> */}
+      <BoardColumn />
+      <BoardColumn />
     </div>
   );
 }

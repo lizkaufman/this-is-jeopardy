@@ -1,12 +1,16 @@
 .categorySquare {
   background-color: var(--main-blue);
   color: white;
-  border: 2px solid var(--dark-indigo);
+  border: 2px solid var(--dark-navy);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 130px;
+  width: 15vw;
 }
 
 .categoryText {
-  margin: 0 auto;
+  margin: auto 10px;
+  font-size: 150%;
+  text-align: center;
 }

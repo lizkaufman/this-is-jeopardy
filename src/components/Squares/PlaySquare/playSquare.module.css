@@ -1,20 +1,28 @@
 .playSquare {
   background-color: var(--main-blue);
-  border: 2px solid var(--dark-indigo);
+  border: 2px solid var(--dark-navy);
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  height: 130px;
+  width: 15vw;
 }
 
 .value {
   color: #ffcc00;
+  margin: auto 0;
+  font-size: 300%;
 }
 
 .question {
   color: white;
+  margin: auto 10px;
+  font-size: 95%;
 }
 
 .answer {
   color: white;
+  margin: auto 0;
+  margin: auto 10px;
 }

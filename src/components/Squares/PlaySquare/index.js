@@ -15,12 +15,12 @@ function PlaySquare({ questionObject, value }) {
     <div className={css.playSquare} onClick={handleClick}>
       {clicks === 0 && <h2 className={css.value}>${value}</h2>}
       {clicks === 1 && (
-        <h2 className={css.question}>{questionObject['question']}</h2>
+        <h3 className={css.question}>{questionObject['question']}</h3>
       )}
       {clicks === 2 && (
-        <h2 className={css.answer}>{questionObject['answer']}</h2>
+        <h3 className={css.answer}>{questionObject['answer']}</h3>
       )}
-      {clicks > 2 && <h2 className={css.answer}>-</h2>}
+      {clicks > 2 && <h3 className={css.answer}>-</h3>}
     </div>
   );
 }
