@@ -1,3 +1,3 @@
-const apiUrl = 'http://jservice.io/api/';
+const apiUrl = 'https://jservice.io/api/';
 
 export default apiUrl;
