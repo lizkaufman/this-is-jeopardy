@@ -1,5 +1,7 @@
 # This is Jeopardy! (Well... a tribute at least!)
 
+UPDATE 26/08/2025 - the JService API is gone, so this app no longer functions. :( 
+
 I've been a Jeopardy superfan since waaaay back, but living in England makes episodes hard to find! So when I found http://jservice.io/, I thought I'd try to make my own. :)
 
 I've used the jservice.io API to pull through categories by category id and use this category id to get a set of questions and answers for each column, and I've designed a basic Jeopardy board in React to house them. Click once on a dollar amount for your question, a second time for your answer, and a third time to clear the square. Refresh to get a whole new set of questions. 
